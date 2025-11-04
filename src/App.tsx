@@ -18,8 +18,6 @@ function GetMessagesFromLocalStorage(): Message[] {
         return JSON.parse(messagesString)
     }
 
-    // --- NEW, MORE REALISTIC GROUP CONVERSATION ---
-    // This array will be returned if no messages are found in local storage.
     const now = Date.now()
     return [
         {
