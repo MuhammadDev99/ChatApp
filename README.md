@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Real-Time Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern, and responsive real-time chat application built with React (using Vite) and Preact Signals for state management. This project features a dark theme UI and uses browser local storage to persist messages and user names.
 
-Currently, two official plugins are available:
+### [Live Demo](https://muhammaddev99.github.io/ChatApp/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <!-- You can replace this with your own screenshot -->
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+-   **Real-Time Messaging:** Instantly send and receive messages.
+-   **Dark Theme UI:** A sleek, modern, and eye-pleasing dark interface.
+-   **User Personalization:** Set a custom user name for your chat session.
+-   **Persistent Chat History:** Messages and your chosen name are saved to your browser's local storage, so your session is remembered when you return.
+-   **Auto-Scrolling:** The chat window automatically scrolls to the newest message.
+-   **Responsive Design:** A clean layout that works well on different screen sizes.
+-   **Welcome Experience:** A pre-populated, realistic group conversation greets new users for the first time.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-   **Frontend:** [React](https://react.dev/) with [Vite](https://vitejs.dev/)
+-   **State Management:** [Preact Signals](https://preactjs.com/guide/v10/signals/) (`@preact/signals-react`) for efficient and reactive state handling.
+-   **Styling:** Custom CSS with a dark theme and styled scrollbars.
+-   **Deployment:** [GitHub Pages](https://pages.github.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup and Local Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To get a local copy up and running, follow these simple steps.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+
+-   Node.js (version 20.19+ or 22.12+)
+-   npm (comes with Node.js)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/MuhammadDev99/ChatApp.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd ChatApp
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+
+The application will now be running on `http://localhost:5173` (or the next available port).
+
+---
+
+## Deployment
+
+This project is configured for easy deployment to GitHub Pages.
+
+To deploy your own version:
+
+1.  **Configure `package.json`:**
+    -   Set the `homepage` property to `https://<your-github-username>.github.io/<your-repo-name>/`.
+2.  **Configure `vite.config.ts`:**
+    -   Set the `base` property to `/<your-repo-name>/`.
+3.  **Run the deploy script:**
+    ```sh
+    npm run deploy
+    ```
+    This script will build the application and push the `dist` folder to a `gh-pages` branch on your repository.
+
+4.  **Enable GitHub Pages:**
+    -   In your repository settings, go to the "Pages" tab.
+    -   Set the source to **Deploy from a branch** and select the `gh-pages` branch.
