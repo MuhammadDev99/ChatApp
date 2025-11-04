@@ -4,7 +4,7 @@ A clean, modern, and responsive real-time chat application built with React (usi
 
 ### [Live Demo](https://muhammaddev99.github.io/ChatApp/)
 
-  <!-<img width="317" height="518" alt="Screenshot 2025fdsfds11-05 005214" src="https://github.com/user-attachments/assets/502c6681-eb53-4322-add9-0381b20147e3" />
+ <img width="317" height="518" alt="Screenshot 2025fdsfds11-05 005214" src="https://github.com/user-attachments/assets/502c6681-eb53-4322-add9-0381b20147e3" />
 
 ---
 
