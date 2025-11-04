@@ -101,8 +101,8 @@ button:hover {
 }
 
 input {
-    box-sizing: border-box; /* This is the fix */
-    width: calc(100% - 20px); /* Now this correctly accounts for the 10px margin on each side */
+    box-sizing: border-box;
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -111,8 +111,6 @@ input {
     color: white;
 }
 
-/* --- SCROLLBAR STYLES --- */
-/* For WebKit-based browsers (Chrome, Edge, Safari) */
 .messages::-webkit-scrollbar {
     width: 8px;
 }
