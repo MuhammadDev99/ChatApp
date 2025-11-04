@@ -58,25 +58,3 @@ To get a local copy up and running, follow these simple steps.
     ```
 
 The application will now be running on `http://localhost:5173` (or the next available port).
-
----
-
-## Deployment
-
-This project is configured for easy deployment to GitHub Pages.
-
-To deploy your own version:
-
-1.  **Configure `package.json`:**
-    -   Set the `homepage` property to `https://<your-github-username>.github.io/<your-repo-name>/`.
-2.  **Configure `vite.config.ts`:**
-    -   Set the `base` property to `/<your-repo-name>/`.
-3.  **Run the deploy script:**
-    ```sh
-    npm run deploy
-    ```
-    This script will build the application and push the `dist` folder to a `gh-pages` branch on your repository.
-
-4.  **Enable GitHub Pages:**
-    -   In your repository settings, go to the "Pages" tab.
-    -   Set the source to **Deploy from a branch** and select the `gh-pages` branch.
